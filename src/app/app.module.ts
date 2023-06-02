@@ -7,7 +7,8 @@ import { RegisterORLoginComponent } from './features/register-orlogin/register-o
 import { DoctorRegistrationFormComponent } from './features/doctor-registration-form/doctor-registration-form.component';
 import { ViewDoctorsPageComponent } from './features/view-doctors-page/view-doctors-page.component';
 import { AfterRegistrationPageComponent } from './features/after-registration-page/after-registration-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

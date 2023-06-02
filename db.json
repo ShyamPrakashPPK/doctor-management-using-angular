@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "mobile_number": "09446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "id": 3
+    },
+    {
+      "mobile_number": "09446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2020-01-15",
+      "id": 4
+    },
+    {
+      "mobile_number": "09446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2018-06-14",
+      "degree": "111",
+      "id": 5
+    },
+    {
+      "mobile_number": "09446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2020-07-16",
+      "degree": "1111",
+      "id": 6
+    },
+    {
+      "mobile_number": "09446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2014-07-03",
+      "degree": "qqq",
+      "id": 7
+    }
+  ]
+}
