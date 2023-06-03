@@ -1,55 +1,99 @@
 {
-  "users": [
+  "doctors": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john@example.com"
+      "mobile_number": "9446791982",
+      "email_address": "shyam@gmail.com",
+      "full_name": "Shyam ",
+      "password": "Shyam@123",
+      "date": "2016-12-30",
+      "degree": [
+        "MBBS",
+        "MD"
+      ],
+      "online_fees": "1000",
+      "offline_fees": "1000",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Jane Smith",
-      "email": "jane@example.com"
+      "mobile_number": "9074488318",
+      "email_address": "elon@gmail.com",
+      "full_name": "Elon Musk",
+      "password": "Elon@123",
+      "date": "2015-06-05",
+      "degree": [
+        "MBBS",
+        "MD"
+      ],
+      "online_fees": "10000",
+      "offline_fees": "10000",
+      "id": 2
     },
     {
-      "mobile_number": "09446791982",
+      "mobile_number": "9446791982",
       "email_address": "shyamprakash0019@gmail.com",
       "full_name": "shyam prakash",
-      "password": "Shyam@123",
+      "password": "shyaM@123",
+      "date": "2017-01-05",
+      "degree": [
+        "MBBS"
+      ],
+      "online_fees": "5000",
+      "offline_fees": "5000",
       "id": 3
     },
     {
-      "mobile_number": "09446791982",
-      "email_address": "shyamprakash0019@gmail.com",
-      "full_name": "shyam prakash",
+      "mobile_number": "9446791982",
+      "email_address": "shyam@gmail.com",
+      "full_name": "Shyam ",
       "password": "Shyam@123",
-      "date": "2020-01-15",
+      "date": "2016-12-30",
+      "degree": [
+        "MBBS",
+        "MD"
+      ],
+      "online_fees": "1000",
+      "offline_fees": "1000",
       "id": 4
     },
     {
-      "mobile_number": "09446791982",
-      "email_address": "shyamprakash0019@gmail.com",
-      "full_name": "shyam prakash",
-      "password": "Shyam@123",
-      "date": "2018-06-14",
-      "degree": "111",
+      "mobile_number": "9074488318",
+      "email_address": "elon@gmail.com",
+      "full_name": "Elon Musk",
+      "password": "Elon@123",
+      "date": "2015-06-05",
+      "degree": [
+        "MBBS",
+        "MD"
+      ],
+      "online_fees": "10000",
+      "offline_fees": "10000",
       "id": 5
     },
     {
-      "mobile_number": "09446791982",
+      "mobile_number": "9446791982",
       "email_address": "shyamprakash0019@gmail.com",
       "full_name": "shyam prakash",
-      "password": "Shyam@123",
-      "date": "2020-07-16",
-      "degree": "1111",
+      "password": "shyaM@123",
+      "date": "2017-01-05",
+      "degree": [
+        "MBBS"
+      ],
+      "online_fees": "5000",
+      "offline_fees": "5000",
       "id": 6
     },
     {
-      "mobile_number": "09446791982",
+      "mobile_number": "9446791982",
       "email_address": "shyamprakash0019@gmail.com",
       "full_name": "shyam prakash",
-      "password": "Shyam@123",
-      "date": "2014-07-03",
-      "degree": "qqq",
+      "password": "Shyam@@@123",
+      "date": "2022-06-15",
+      "degree": [
+        "MBBS",
+        "MD"
+      ],
+      "online_fees": "100",
+      "offline_fees": "100",
       "id": 7
     }
   ]

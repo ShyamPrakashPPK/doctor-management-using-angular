@@ -1,14 +1,35 @@
-<h1>Doctors</h1>
+<div class="container">
+    <h1>Doctors</h1>
 
-<h3>Registered Doctors</h3>
+    <h3>Registered Doctors</h3>
 
-<div class="cardArea">
-    <div class="card">
+    <div class="cardArea">
+        <div class="cards" *ngFor="let doctor of doctors">
+            <div class="card red">
+                <div class="infos">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div>
+                            <p class="name">{{ doctor.full_name }}</p>
+                            <p class="function">{{ doctor.degree }}</p>
+                            <p class="function">{{ doctor.date | experience }} years of experience</p>
+                            <p class="function">Online Consult Fees: {{ doctor.online_fees }} RS</p>
+                            <p class="function">Offline Consult Fees: {{ doctor.offline_fees }} RS</p>
+                        </div>
+                    </div>
+                </div>
+                <button>
+                    Book Appointment
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
 
+    <div class="buttonArea">
+        <button (click)="loadMore()">Load More</button>
+        <button (click)="goToHome()">Go to home</button>
     </div>
 </div>
-
-<button>LoadMore</button>
-
-<button>Go to home</button>
-

@@ -3,17 +3,16 @@
         <div class="col-md-12">
             <form [formGroup]="myForm" (ngSubmit)="submitForm()" method="post">
                 <h1> Sign Up </h1>
-
                 <fieldset>
-
                     <legend><span class="number">1</span> Your Basic Info</legend>
-
+                    
                     <label for="name">Mobile Number:</label>
                     <input type="text" id="mobile_number" name="doc_number" formControlName="mobile_number">
                     <small *ngIf="r['mobile_number'].touched && r['mobile_number'].errors?.['required']"
                         class="error">Must
                         Enter Your Mobile Number</small>
-
+                    <small *ngIf="r['mobile_number'].touched && r['mobile_number'].errors?.['pattern']"
+                        class="error">Enter a valid number</small>
 
                     <label for="name">Email Address:</label>
                     <input type="email" id="email_address" name="doc_mail" formControlName="email_address">
@@ -36,26 +35,35 @@
                     <label for="password">Confirm Password:</label>
                     <input type="password" id="confirm_password" formControlName="confirm_password">
 
-
+                    <label for="date">Pick you Graduation year</label>
                     <input type="date" name="date" formControlName="date">
                 </fieldset>
 
                 <fieldset>
-
                     <legend><span class="number">2</span> Your Degree and Experience</legend>
-
-                    <label for="name">Degree 1:</label>
-                    <input type="text" id="degree1" formControlName="degree">
-
                     <div *ngFor="let value of values;let i =index">
-                        <input (onChange)="addNewDegree()" type="text"  name="value{{i}}">
-                        <button (click)="removeValues(i)">remove</button>
+                        <label for="name">Degree {{i+1}}:</label>
+                        <input (change)="addNewDegree(input.value,i)" #input type="text" name="value{{i}}"
+                            [value]="value || ''">
+                        <button *ngIf="i!=0" type="button" (click)="removeValues(i)">remove</button>
                     </div>
-                   
-                        <button type="button" (click)="addValues()">add</button>
 
+                    <button type="button" (click)="addValues()">add</button>
+                </fieldset>
 
+                <fieldset>
+                    <legend><span class="number">3</span> Your fees</legend>
+                    <label for="fees">Online consult fee</label>
+                    <input type="text" id="online_consult_fee" name="doc_mail" formControlName="online_consult_fee">
+                    <small *ngIf="r['online_consult_fee'].touched && r['online_consult_fee'].errors?.['required']"
+                        class="error">Must
+                        Enter Your Fees</small>
 
+                    <label for="fees">In person consult fee</label>
+                    <input type="text" id="offline_consult_fee" name="doc_name" formControlName="offline_consult_fee">
+                    <small *ngIf="r['offline_consult_fee'].touched && r['offline_consult_fee'].errors?.['required']"
+                        class="error">Must
+                        Enter Your fees</small>
                 </fieldset>
 
                 <button type="submit">Sign Up</button>
