@@ -5,7 +5,7 @@
                 <h1> Sign Up </h1>
                 <fieldset>
                     <legend><span class="number">1</span> Your Basic Info</legend>
-                    
+
                     <label for="name">Mobile Number:</label>
                     <input type="text" id="mobile_number" name="doc_number" formControlName="mobile_number">
                     <small *ngIf="r['mobile_number'].touched && r['mobile_number'].errors?.['required']"
@@ -30,13 +30,18 @@
                     <input type="password" id="password" name="doc_password" formControlName="password">
                     <small *ngIf="r['password'].touched && r['password'].errors?.['required']" class="error">Password
                         must contain minimum 8 characters, at least 1 special character, at least 1 digit </small>
+                    <small *ngIf="r['password'].touched && r['password'].errors?.['pattern']" class="error">Password
+                        must contain minimum 8 characters, at least 1 special character, at least 1 digit </small>
 
 
                     <label for="password">Confirm Password:</label>
                     <input type="password" id="confirm_password" formControlName="confirm_password">
 
+
                     <label for="date">Pick you Graduation year</label>
                     <input type="date" name="date" formControlName="date">
+                    <small *ngIf="r['date'].touched && r['date'].errors?.['required']" class="error">Graduation year is required</small>
+
                 </fieldset>
 
                 <fieldset>
