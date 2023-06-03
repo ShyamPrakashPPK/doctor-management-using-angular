@@ -108,6 +108,19 @@
       "online_fees": "100",
       "offline_fees": "100",
       "id": 8
+    },
+    {
+      "mobile_number": "0944679198",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2023-06-22",
+      "degree": [
+        "MBBS"
+      ],
+      "online_fees": "10",
+      "offline_fees": "100",
+      "id": 9
     }
   ]
 }
