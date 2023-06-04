@@ -26,7 +26,7 @@ import { Router } from '@angular/router';
       this.http.get<any[]>(url).subscribe(
         (response: any[]) => {
           if (response.length > 0) {
-            this.doctors = response;
+            this.doctors = [...this.doctors,...response];
             console.log('Doctors:', this.doctors);
           } else {
             alert('No more available doctors');
@@ -49,6 +49,15 @@ import { Router } from '@angular/router';
     goToHome() {
       this.route.navigate([''])
     }
+
+    viewDoctor(doctor: string) {
+      this.route.navigate(['/doctor-details', doctor])
+    }   
+
+
+
+
+
 
 
 

@@ -7,8 +7,12 @@ export class ExperiencePipe implements PipeTransform {
   transform(date: string): string {
     const currentDate = new Date();
     const startDate = new Date(date);
-    const yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear();
+    let getMonth = Math.floor(currentDate.getMonth() - startDate.getMonth());
+    if (getMonth < 0) {
+      getMonth += 12;
+    }
+    const yearsOfExperience = Math.floor(currentDate.getFullYear() - startDate.getFullYear());
 
-    return yearsOfExperience.toString();
+    return yearsOfExperience.toString() +" . "+ getMonth.toString();
   }
 }

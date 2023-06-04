@@ -49,7 +49,7 @@
                     <div *ngFor="let value of values;let i =index">
                         <label for="name">Degree {{i+1}}:</label>
                         <input (change)="addNewDegree(input.value,i)" #input type="text" name="value{{i}}"
-                            [value]="value || ''">
+                            [value]="value || ''" >
                         <button *ngIf="i!=0" type="button" (click)="removeValues(i)">remove</button>
                     </div>
 

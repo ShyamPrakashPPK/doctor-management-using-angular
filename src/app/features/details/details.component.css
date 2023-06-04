@@ -17,7 +17,7 @@
     content: ", ";
 }
 
-.doctors .item:first-child::before{
+.doctors .item:first-child::before {
     display: none;
 }
 
@@ -34,6 +34,7 @@
     align-items: center;
     margin-top: 20px;
 }
+
 .cards {
     display: flex;
     flex-direction: column;
@@ -61,28 +62,26 @@
     color: rgb(1, 1, 1);
     cursor: pointer;
     transition: 400ms;
-}   
+}
 
 .cards .card:hover {
     transform: scale(1.1, 1.1);
 }
 
-.infos{
+.infos {
     display: grid;
     grid-template-columns: 30% 70%;
 }
 
 
-.left 
-
-.card .left .image{
+.left .card .left .image {
     height: 5rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 2px solid red;
 }
 
-.card .left img{
+.card .left img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -114,4 +113,3 @@ button {
 button:hover {
     background-color: var(--hover-color);
 }
-

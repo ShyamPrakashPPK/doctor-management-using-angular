@@ -10,6 +10,7 @@ import { AfterRegistrationPageComponent } from './features/after-registration-pa
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ExperiencePipe } from './shared/services/experience.service';
+import { DetailsComponent } from './features/details/details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExperiencePipe } from './shared/services/experience.service';
     DoctorRegistrationFormComponent,
     ViewDoctorsPageComponent,
     AfterRegistrationPageComponent,
-    ExperiencePipe
+    ExperiencePipe,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

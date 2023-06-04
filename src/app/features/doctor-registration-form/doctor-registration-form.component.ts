@@ -12,7 +12,7 @@ export class DoctorRegistrationFormComponent {
   myForm!: FormGroup;
   values: any = [""];
 
-  constructor(private formBuilder: FormBuilder ,private http: HttpClient,private route:Router) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private route: Router) { }
 
   ngOnInit() {
     this.myForm = this.formBuilder.group({
@@ -24,7 +24,7 @@ export class DoctorRegistrationFormComponent {
       date: ['', Validators.required],
       online_consult_fee: ['', Validators.required],
       offline_consult_fee: ['', Validators.required],
-    },{
+    }, {
       validators: passwordChecker('password', 'confirm_password')
     });
   }
@@ -36,18 +36,18 @@ export class DoctorRegistrationFormComponent {
   }
 
 
-//to add a new degree
+  //to add a new degree
   addNewDegree(value: any, index: number) {
     this.values[index] = value
   }
 
 
-//for adding and removing new degree
+  //for adding and removing new degree
   removeValues(i: any) {
     if (i !== 0) {
       alert("Need at least on degree")
       this.values.splice(i, 1)
-    } 
+    }
   }
   addValues() {
     this.values.push('')
@@ -58,30 +58,41 @@ export class DoctorRegistrationFormComponent {
 
   submitForm() {
     console.log("..................................");
-    
+
     if (this.myForm.valid) {
-      const newDoctor = {
-        mobile_number: this.r['mobile_number'].value,
-        email_address: this.r['email_address'].value,
-        full_name: this.r['full_name'].value,
-        password: this.r['password'].value,
-        date: this.r['date'].value,
-        degree: this.values,
-        online_fees: this.r['online_consult_fee'].value,
-        offline_fees: this.r['offline_consult_fee'].value
-      };  
+      let error = this.values.filter((value: any) => value === '')
+      if (error.length > 0) {
+        console.log(error);
+        console.log(this.values);
+        alert('Cant leave any empty fields')
+
+      } else {
+        console.log(error);
+        console.log(this.values);
+        const newDoctor = {
+          mobile_number: this.r['mobile_number'].value,
+          email_address: this.r['email_address'].value,
+          full_name: this.r['full_name'].value,
+          password: this.r['password'].value,
+          date: this.r['date'].value,
+          degree: this.values,
+          online_fees: this.r['online_consult_fee'].value,
+          offline_fees: this.r['offline_consult_fee'].value
+        };
         this.http.post('http://localhost:3000/doctors', newDoctor).subscribe(
-        (response: any) => {
+          (response: any) => {
             console.log('New user created:', response);
             this.route.navigate(['/doc-reg-sucessfull'])
-        },
-        (error: any) => {
-          console.error('Error creating user:', error);
-        }
-      );
+          },
+          (error: any) => {
+            console.error('Error creating user:', error);
+          }
+        );
+      }
     } else {
       this.myForm.markAllAsTouched();
     }
+
   }
-  
+
 }

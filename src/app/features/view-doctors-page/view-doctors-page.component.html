@@ -5,20 +5,25 @@
 
     <div class="cardArea">
         <div class="cards" *ngFor="let doctor of doctors">
-            <div class="card red">
+            <div class="card">
                 <div class="infos">
-                    <div class="image"></div>
-                    <div class="info">
-                        <div>
-                            <p class="name">{{ doctor.full_name }}</p>
-                            <p class="function">{{ doctor.degree }}</p>
-                            <p class="function">{{ doctor.date | experience }} years of experience</p>
-                            <p class="function">Online Consult Fees: {{ doctor.online_fees }} RS</p>
-                            <p class="function">Offline Consult Fees: {{ doctor.offline_fees }} RS</p>
+
+                    <div class="left">
+                        <div class="image"> <img src="../../../assets/image/elonmusk.jpg" alt=""></div>
+                        <p class="function"><span>Experience<br></span>{{ doctor.date | experience }} years</p>
+
+                    </div>
+                    <div class="right">
+                        <p class="">{{ doctor.full_name }}</p>
+                        <div class="doctors"><span class="item" *ngFor="let degree of doctor.degree"> {{ degree }}
+                            </span>
                         </div>
+                        <p class="next-slot">Nest Slot: 11:00 AM</p>
+                        <p class="function">Online Consult Fees: {{ doctor.online_fees }} RS</p>
+                        <p class="function">Offline Consult Fees: {{ doctor.offline_fees }} RS</p>
                     </div>
                 </div>
-                <button>
+                <button (click)="viewDoctor(doctor.id)">
                     Book Appointment
                     <div class="arrow-wrapper">
                         <div class="arrow"></div>
@@ -29,6 +34,8 @@
     </div>
 
     <div class="buttonArea">
+        <label for=""></label>
+        <input type="text">
         <button (click)="loadMore()">Load More</button>
         <button (click)="goToHome()">Go to home</button>
     </div>

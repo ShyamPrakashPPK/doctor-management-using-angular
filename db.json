@@ -121,6 +121,80 @@
       "online_fees": "10",
       "offline_fees": "100",
       "id": 9
+    },
+    {
+      "mobile_number": "9446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2018-03-15",
+      "degree": [
+        "MBBS",
+        "MD",
+        ""
+      ],
+      "online_fees": "1000",
+      "offline_fees": "1000",
+      "id": 10
+    },
+    {
+      "mobile_number": "9446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2018-03-15",
+      "degree": [
+        "MBBS",
+        "MD",
+        ""
+      ],
+      "online_fees": "1000",
+      "offline_fees": "1000",
+      "id": 11
+    },
+    {
+      "mobile_number": "9446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2017-05-13",
+      "degree": [
+        "MBBS",
+        "MD",
+        ""
+      ],
+      "online_fees": "100",
+      "offline_fees": "100",
+      "id": 12
+    },
+    {
+      "mobile_number": "9446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2022-01-04",
+      "degree": [
+        "Mbbs",
+        "MD",
+        ""
+      ],
+      "online_fees": "877251",
+      "offline_fees": "91286",
+      "id": 13
+    },
+    {
+      "mobile_number": "0446791982",
+      "email_address": "shyamprakash0019@gmail.com",
+      "full_name": "shyam prakash",
+      "password": "Shyam@123",
+      "date": "2022-06-04",
+      "degree": [
+        "mms",
+        "ss"
+      ],
+      "online_fees": "111",
+      "offline_fees": "211",
+      "id": 14
     }
   ]
 }

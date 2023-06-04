@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Doctors</h1>
+
+    <h3>Registered Doctors</h3>
+
+    <div class="cardArea">
+        <div class="cards">
+            <div class="card">
+                <div class="infos">
+                    <div class="left">
+                        <div class="image"> <img src="../../../assets/image/elonmusk.jpg" alt=""></div>
+                        <p class="function"><span>Experience<br></span>{{ doctorDetails?.date | experience }} years</p>
+                    </div>
+                    <div class="right">
+                        <p class="">{{ doctorDetails?.full_name }}</p>
+                        <div class="doctors">
+                            <span class="item" *ngFor="let degree of doctorDetails?.degree">{{ degree }}</span>
+                        </div>
+                        <p class="next-slot">Next Slot: 11:00 AM</p>
+                        <p class="function">Online Consult Fees: {{ doctorDetails?.online_fees }} RS</p>
+                        <p class="function">Offline Consult Fees: {{ doctorDetails?.offline_fees }} RS</p>
+                    </div>
+                </div>
+                <button>
+                    Book Appointment
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttonArea">
+       
+        <button (click)="goToHome()">Go to home</button>
+    </div>
+</div>
