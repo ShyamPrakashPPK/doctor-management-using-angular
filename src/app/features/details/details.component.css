@@ -73,9 +73,14 @@
     grid-template-columns: 30% 70%;
 }
 
+.card .left span {
+    font-weight: 500;
+}
 
-.left .card .left .image {
-    height: 5rem;
+
+
+.card .left .image {
+    height: 7rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 2px solid red;
@@ -85,6 +90,32 @@
     height: 100%;
     width: 100%;
     border-radius: 50%;
+}
+
+.card .right .name {
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.card .right .doctors span {
+    font-weight: 300;
+}
+
+.card .right .fees p {
+    font-weight: 600;
+}
+
+.card .right .fees span {
+    font-weight: 400
+}
+
+.card .right .time {
+    display: inline-block;
+    background-color: #d3d3d3;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    /* Adjust border-radius as needed */
 }
 
 
@@ -98,14 +129,19 @@ button {
     border: 0;
     border-radius: 20px;
     color: var(--secondary-color);
-    padding: 1em 7em 1em 7em;
+    padding: 1em 7em;
+    /* Adjust padding values as needed */
     background: var(--primary-color);
     display: flex;
     transition: 0.2s background;
     align-items: center;
+    justify-content: center;
+    /* Center align the text horizontally */
     gap: 0.6em;
     font-weight: bold;
     margin: 10px;
+    text-align: center;
+    /* Center align the text vertically */
 }
 
 
